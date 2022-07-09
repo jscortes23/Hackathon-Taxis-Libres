@@ -5,10 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hackathon | Taxis Libre</title>
+    <link rel="preload" href="/css/font/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="/css/style/mobile.css" />
   </head>
   <body>
-    <section class="container__start"></section>
+    <section class="container__start">
+      <span class="strat__icon--right-upper-corner"></span>
+      <button class="start__btn--nav"></button>
+      <img class="start__logo" src="/assets/icons/logo-taxis-libre.png" alt="Logo Taxis Libre">
+      <h1 class="start__title">Hackathon 2022</h1>
+      <div class="start--container__date"></div>
+      <p class="start__date">26 al 28 agosto</p>
+      <form class="start--container__form" action="" method="post">
+        <fieldset class="form__content">
+          <h2 class="form__title">¡Inscríbete ahora!</h2>
+          <div class="form--container__input">
+            <input class="form__input" type="text" name="firstName" id="firstName" required>
+            <label class="form__label" for="firstName">Nombres</label>
+          </div>
+          <div class="form--container__input">
+            <input class="form__input" type="text" name="lastName" id="lastName" required>
+            <label class="form__label" for="lastName">Apellidos</label>
+          </div>
+          <div class="form--container__input">
+            <input class="form__input" type="date" name="birthDate" id="birthDate" required>
+            <label class="form__label" for="birthDate">Fecha de nacimiento</label>
+          </div>
+          <div class="form--container__input">
+            <input class="form__input" type="email" name="email" id="email" required>
+            <label class="form__label" for="email">Correo</label>
+          </div>
+          <div class="form--container__place">
+            <div class="form--container__input">
+              <input class="form__input" type="text" name="country" id="country" required>
+              <label class="form__label" for="country">País</label>
+            </div>
+            <div class="form--container__input">
+              <input class="form__input" type="text" name="city" id="city" required>
+              <label class="form__label" for="city">Ciudad</label>
+            </div>
+          </div>
+          <div class="form--container__input">
+            <input class="form__input" type="tel" name="phone" id="phone" required>
+            <label class="form__label" for="phone">Teléfono</label>
+          </div>
+          <div class="form--container__input">
+            <input class="form__input" type="text" name="levelStudy" id="levelStudy" required>
+            <label class="form__label" for="levelStudy">Nivel de estudios</label>
+          </div>
+          <input class="form__input" type="submit" value="Enviar">
+        </fieldset>
+      </form>
+      <span class="strat__icon--left-lower-corner"></span>
+      <!-- <span class="strat__icon--line-lower"></span> -->
+    </section>
     <section class="container__info"></section>
     <section class="container__modalidad"></section>
     <section class="container__prize"></section>
