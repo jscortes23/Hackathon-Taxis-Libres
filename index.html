@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon | Taxis Libre</title>
+    <title>Hackathon | Taxis Libres</title>
     <link rel="preload" href="/css/font/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="/css/style/mobile.css" />
   </head>
@@ -59,12 +59,66 @@
       <span class="strat__icon--left-lower-corner"></span>
       <!-- <span class="strat__icon--line-lower"></span> -->
     </section>
-    <section class="container__info"></section>
+    <section class="container__info">
+      <div id="cuenta"></div>
+      <div class="acordeon">
+        <div class="topic">
+          <div class="label">¿Qué es?</div>
+          <div class="content">
+            <p>
+              La hackathon es una maratón de creatividad de 72 horas para
+              desarrollar soluciones en pro de la movilidad donde participarán
+              estudiantes, profesionales, creativos, innovadores en diferentes
+              áreas a través de la tecnología.
+            </p>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="label">Objetivo del evento</div>
+          <div class="content">
+            <p>
+              - Acercar a los estudiantes a la aplicación des sus conocimientos a
+              retos empresariales y de contextos reales.<br /><br />
+              - Brindar oportunidades de vinculación laboral a los estudiantes y
+              egresados antes de que se graduen.<br /><br />
+              - Generar espacios de emprendimiento y networking.<br /><br />
+              - Seguir posicionando la universidad como promotora de nuevas
+              metodologías de aprendizaje.
+            </p>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="label">¿Cuándo es?</div>
+          <div class="content">
+            <p>
+              26, 27 y 28 de agosto de 2022<br />
+              Modalidad virtual
+            </p>
+          </div>
+        </div>        
+      </div>
+      <div>
+        <h2 class="body__title">Hackathon Taxis Libres 2021</h2>
+      </div>
+      <div>
+        <iframe class="youtube" src="https://www.youtube.com/embed/uymNo5govDI" title="Taxis Libres | Así se vivió la Hackathon Taxis Libres 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
     <section class="container__modalidad"></section>
     <section class="container__prize"></section>
     <section class="container__participe"></section>
     <section class="container__sponsor"></section>
     <section class="container__speakers"></section>
     <section class="container__agenda"></section>
+    <script src="js/simplyCountdown.min.js"></script>
+    <script src="js/countdown.js"></script>
+    <script>
+      const acordeon = document.getElementsByClassName('topic');
+      for (i=0; i<acordeon.length; i++ ){
+        acordeon[i].addEventListener('click',function(){
+          this.classList.toggle('active')
+        })
+      }
+    </script>    
   </body>
 </html>

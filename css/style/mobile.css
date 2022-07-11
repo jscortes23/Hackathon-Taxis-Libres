@@ -6,8 +6,10 @@
         font-display: swap;
     }
     @font-face {
-        font-family: Allotrope;
-        src: url();
+        font-family: Oxanium;
+        src: url('/css/font/Oxanium-VariableFont_wght.ttf');
+        font-weight: 100 1000;
+        font-display: swap;
     }
 }
 
@@ -297,3 +299,125 @@ picture, img {
     background-position: center;
     background-size: 100%;
 } */
+
+.container__info {
+    display: flex;
+    width: 100%;
+    height: auto;  
+    align-items: center;  
+    flex-direction: column;    
+    background-color: #F2F2F2;
+    border-radius: inherit;
+    justify-content: center;      
+}
+
+#cuenta {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #F2F2F2;
+    max-width: 370px;
+    margin-bottom: 60px;
+    margin-top: 60px;  
+}
+
+.simply-section {
+    font-family: 'Orbitron', sans-serif;    
+    width: 80px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #002765;
+}
+
+.simply-word {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;    
+}
+
+.simply-amount {
+    display: flex;
+    font-size: 26px;
+    font-weight: 800;
+    justify-content: center;
+}
+
+.acordeon {
+    font-family: 'Oxanium', sans-serif;   
+    margin: 0px 0px 60px 0px;
+    max-width: 360px;  
+}
+
+.acordeon .topic{
+    position: relative;
+    margin: 2px 3px 2px 3px;       
+}
+
+.acordeon .topic .label{    
+    padding: 10px;    
+    background: #FCFCFC;
+    color: #002765;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    height: 55px;
+    width: 350px; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
+    margin-bottom: 5px; 
+    text-align: center;
+    padding-right: 40px;   
+}
+
+.acordeon .topic .label::before{
+    content: url(/assets/icons/flecha.svg);
+    position: absolute;    
+    left: 300px;   
+    
+}
+
+.acordeon .topic .content{
+    position: relative;
+    padding: 0px;
+    height: 0;
+    color: #002765;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.acordeon .topic.active .content{
+    height: 130px;
+    padding: 15px;
+    width: 350px;
+    font-size: 15px;
+}
+
+.body__title{
+    display: flex;
+    max-width: 80%;
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 120%;  
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #002765;
+    padding-left: 80px;
+}
+
+.youtube{
+    width: 370px;
+    height: 200px;
+    align-items: center;
+    margin-top: 20px;    
+    margin-bottom: 100px;
+}
