@@ -510,3 +510,76 @@ picture, img {
     place-content: center;
     column-gap: 44px;
 }
+
+/* Section participe */
+
+.container__participe {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.participe__title {
+    font-size: var(--lg-xxx);
+    font-weight: 800;
+    margin-bottom: 45px;
+}
+
+.participe__label {
+    max-width: 59px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.participe__label::before {
+    display: inline-block;
+    content: '';
+    width: 21px;
+    height: 21px;
+    background-color: #F8F8F8;
+    border: 1.5px solid #D0D0D0;
+    border-radius: 50%;
+}
+
+.participe__label::after {
+    position: absolute;
+    display: none;
+    content: '';
+    top: 20%;
+    left: 40%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 
+        0px 0px 0px 5px #F8F8F8,
+        0px 0px 0px 6.5px #002765;
+}
+
+.participe__input--radio {
+    display: none;
+}
+
+.participe__input--radio[name="participe"]:checked + .participe__label::after{
+    display: initial;
+}
+
+.participe__text {
+    margin-top: 38px;
+    margin-bottom: 48px;
+    font-size: var(--md);
+    line-height: 2.6rem;
+    display: none;
+}
+
+.participe__input--radio[value="p1"]:checked ~ .participe__text[data-text="p1"],
+.participe__input--radio[value="p2"]:checked ~ .participe__text[data-text="p2"],
+.participe__input--radio[value="p3"]:checked ~ .participe__text[data-text="p3"],
+.participe__input--radio[value="p4"]:checked ~ .participe__text[data-text="p4"] {
+    display: block;
+}
