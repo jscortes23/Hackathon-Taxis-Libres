@@ -25,6 +25,7 @@ html {
     font-family: Orbitron, sans-serif;
     font-size: 62.5%;
     letter-spacing: 0.07rem;
+    background-color: var(--font-color);
 }
 
 /* Global variables */
@@ -323,9 +324,9 @@ picture, img {
     justify-content: center; 
     align-items: center; 
     background-color: #F2F2F2;
+    width: 90%;
     max-width: 370px;
-    margin-bottom: 60px;
-    margin-top: 60px;  
+    margin: 60px auto;  
 }
 
 .simply-section {
@@ -341,14 +342,14 @@ picture, img {
 
 .simply-word {
     display: flex;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 700;
     justify-content: center;    
 }
 
 .simply-amount {
     display: flex;
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: 800;
     justify-content: center;
 }
@@ -364,27 +365,29 @@ picture, img {
     margin: 2px 3px 2px 3px;       
 }
 
-.acordeon .topic .label{    
+.acordeon .topic .label{
+    position: relative;
+    margin: 0 auto;    
     padding: 10px;    
-    background: #FCFCFC;
+    background-color: #FCFCFC;
     color: #002765;
-    line-height: 35px;
-    font-size: 18px;
+    line-height: 3.5rem;
+    font-size: var(--lg-x);
     font-weight: 400;
     cursor: pointer;
     height: 55px;
-    width: 350px; 
+    width: 90%;
+    max-width: 350px; 
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
     margin-bottom: 5px; 
     text-align: center;
-    padding-right: 40px;   
 }
 
 .acordeon .topic .label::before{
     content: url(/assets/icons/flecha.svg);
     position: absolute;    
-    left: 300px;   
+    left: 89%;   
     
 }
 
@@ -401,28 +404,32 @@ picture, img {
 }
 
 .acordeon .topic.active .content{
-    height: 130px;
-    padding: 15px;
-    width: 350px;
-    font-size: 15px;
+    height: auto;
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 38px;
+    margin-bottom: 31px;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
 }
 
 .body__title{
-    display: flex;
+    margin: 0 auto;
     max-width: 80%;
-    font-family: 'Orbitron';
+    font-family: 'Orbitron', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 23px;
+    font-size: 2.3rem;
     line-height: 120%;  
     text-align: center;
     letter-spacing: 0.01em;
     color: #002765;
-    padding-left: 80px;
 }
 
 .youtube{
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     height: 200px;
     align-items: center;
     margin-top: 20px;    
