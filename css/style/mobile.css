@@ -588,13 +588,13 @@ picture, img {
 /* Section awards */
 
 .container__awards {
-    width: auto;
+    width: 100%;
     height: auto;
     text-align: left;
     font-family: Oxanium, sans-serif;
     color: var(--text-color);
     display: flex;
-    flex-flow: wrap;    
+    flex-wrap: wrap;    
     margin-top: 40px;
     margin-bottom: 100px;
     place-content: center;
@@ -603,7 +603,7 @@ picture, img {
 .awards__card {    
     margin: 10px;
     padding: 30px;
-    min-width: 300px;
+    width: 90%;
     max-width: 316px;
     height: auto;
     border-radius: 8px;
@@ -619,19 +619,22 @@ picture, img {
     margin-left: 15px;    
 }
 
-li {
+.awards--container__list {
+    color: var(--primary-color);
+}
+
+.awards__list__item {
     margin-left: 35px;
-    font-size: 16px;
+    font-size: var(--md);
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
-ul span {
-    color:#001038;
+.item__list {
+    color: var(--text-color);
 }
 
-.medal {
-    position: relative;
+.awards__medal {
     margin-top: -68px;
     margin-left: 180px;
     height: 60px;
