@@ -572,7 +572,7 @@ picture, img {
 
 .participe__text {
     margin-top: 38px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
     font-size: var(--md);
     line-height: 2.6rem;
     display: none;
@@ -596,7 +596,7 @@ picture, img {
     display: flex;
     flex-wrap: wrap;    
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     place-content: center;
 }
 
@@ -638,4 +638,52 @@ picture, img {
     margin-top: -68px;
     margin-left: 180px;
     height: 60px;
+}
+
+/* Section sponsors */
+
+.container__sponsor {
+    margin-top: 80px;
+    margin-bottom: 50px;    
+}
+
+.slider {
+    width: 75vw;    
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.slider .slider-track {
+    display: flex;    
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(200px * 12);
+}
+
+.slider .slide{
+    width: 180px;
+    margin: auto;
+}
+
+.slider .slide img{
+    width: 70%;    
+}
+
+.huawei img {
+    width: 80px; 
+    height: 80px;
+    margin-right: 60px;
+}
+
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-200px * 6));
+        transform: translateX(calc(-200px * 6));
+    }
 }
