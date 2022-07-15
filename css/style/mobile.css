@@ -35,6 +35,7 @@ html {
     --text-white: #F4F4F4;
     --font-color: #F2F2F2;
     --text-color: #002765;
+    --alert-color: #F55D5D;
 
     /* Font sizes */
     --lg-xxx: 2.3rem;
@@ -209,7 +210,6 @@ picture, img {
 }
 
 .form--container__input {
-    position: relative;
     width: 100%;
 }
 
@@ -219,21 +219,74 @@ picture, img {
     color: var(--text-white);
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-    border: 1px solid #ffffff64;
+    border: 2px solid #ffffff64;
 }
 
 .form__input:valid ~ .form__label,
-.form__input[type="date"]:focus ~ .form__label{
+.form__input[type="date"]:focus ~ .form__label,
+.form__input[type="email"]:focus ~ .form__label{
     display: none;
 }
 
 .form__label {
     position: absolute;
-    left: 12px;
+    left: 14px;
     bottom: 6px;
     font-size: var(--sm);
     font-weight: 400;
     color: var(--text-white);
+}
+
+.form__group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.form__alert {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: var(--alert-color);
+    display: none;
+}
+
+.form__alert--active {
+    display: initial;
+}
+
+.form__input--invalid {
+    border: 2px solid var(--alert-color);
+}
+
+
+.form__success {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 48px;
+    height: inherit;
+    width: inherit;
+    background-color: var(--font-color);
+    border-radius: inherit;
+    color: var(--text-color);
+    font-size: var(--lg-x);
+    text-align: center;
+}
+
+.form__success__title {
+    margin-bottom: 48px;
+}
+
+.form__icon {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    background-image: url(/assets/icons/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .form--container__input:nth-last-child(2) {
@@ -248,6 +301,7 @@ picture, img {
 
 .form__input[type="date"]:invalid {
     color: transparent;
+    padding: 1.2px 12px;
 }
 
 .form__input[type="date"]:focus {
@@ -266,6 +320,7 @@ picture, img {
     font-family: Orbitron, sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
+    border: none;
     color: #002765;
     background-color: var(--primary-color);
 }
@@ -528,7 +583,7 @@ picture, img {
 }
 
 .participe__label {
-    max-width: 59px;
+    max-width: 58px;
     position: relative;
     display: inline-block;
     padding: 5px 15px;

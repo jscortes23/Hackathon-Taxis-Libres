@@ -8,6 +8,9 @@
     <link rel="preload" href="/css/font/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/css/font/Oxanium-VariableFont_wght.ttf" as="font" type="font/tff" crossorigin>
     <link rel="stylesheet" href="/css/style/mobile.css" />
+    <script defer src="/js/form.js"></script>
+    <script defer src="js/simplyCountdown.min.js"></script>
+    <script defer src="js/countdown.js"></script>
   </head>
   <body>
     <section class="container__start">
@@ -17,44 +20,72 @@
       <h1 class="start__title">Hackathon 2022</h1>
       <div class="start--container__date"></div>
       <p class="start__date">26 al 28 agosto</p>
-      <form class="start--container__form" action="" method="post">
+      <form class="start--container__form" id="form" action="" method="post">
         <fieldset class="form__content">
           <h2 class="form__title">¡Inscríbete ahora!</h2>
-          <div class="form--container__input">
-            <input class="form__input" type="text" name="firstName" id="firstName" required>
-            <label class="form__label" for="firstName">Nombres</label>
+          <div class="form--container__input" id="group__firstName">
+            <div class="form__group">
+              <input class="form__input" type="text" name="firstName" id="firstName"  required>
+              <label class="form__label" for="firstName">Nombres</label>
+            </div>
+            <span class="form__alert">Este campo es obligatorio</span>
           </div>
-          <div class="form--container__input">
-            <input class="form__input" type="text" name="lastName" id="lastName" required>
-            <label class="form__label" for="lastName">Apellidos</label>
+          <div class="form--container__input" id="group__lastName">
+            <div class="form__group">
+              <input class="form__input" type="text" name="lastName" id="lastName"  required>
+              <label class="form__label" for="lastName">Apellidos</label>
+            </div>
+            <span class="form__alert">Este campo es obligatorio</span>
           </div>
-          <div class="form--container__input">
-            <input class="form__input" type="date" name="birthDate" id="birthDate" required>
-            <label class="form__label" for="birthDate">Fecha de nacimiento</label>
+          <div class="form--container__input" id="group__birthDate">
+            <div class="form__group">
+              <input class="form__input" type="date" name="birthDate" id="birthDate"  required>
+              <label class="form__label" for="birthDate">Fecha de nacimiento</label>
+            </div>
+            <span class="form__alert">Este campo es obligatorio</span>
           </div>
-          <div class="form--container__input">
-            <input class="form__input" type="email" name="email" id="email" required>
-            <label class="form__label" for="email">Correo</label>
+          <div class="form--container__input" id="group__email">
+            <div class="form__group">
+              <input class="form__input" type="email" name="email" id="email"  required>
+              <label class="form__label" for="email">Correo</label>
+            </div>
+            <span class="form__alert">Este campo es obligatorio</span>
           </div>
           <div class="form--container__place">
-            <div class="form--container__input">
-              <input class="form__input" type="text" name="country" id="country" required>
-              <label class="form__label" for="country">País</label>
+            <div class="form--container__input" id="group__country">
+              <div class="form__group">
+                <input class="form__input" type="text" name="country" id="country"  required>
+                <label class="form__label" for="country">País</label>
+              </div>
+              <span class="form__alert">Este campo es obligatorio</span>
             </div>
-            <div class="form--container__input">
-              <input class="form__input" type="text" name="city" id="city" required>
-              <label class="form__label" for="city">Ciudad</label>
+            <div class="form--container__input" id="group__city">
+              <div class="form__group">
+                <input class="form__input" type="text" name="city" id="city"  required>
+                <label class="form__label" for="city">Ciudad</label>
+              </div>
+              <span class="form__alert">Este campo es obligatorio</span>
             </div>
           </div>
-          <div class="form--container__input">
-            <input class="form__input" type="tel" name="phone" id="phone" required>
-            <label class="form__label" for="phone">Teléfono</label>
+          <div class="form--container__input" id="group__phone">
+            <div class="form__group">
+              <input class="form__input" type="tel" name="phone" id="phone"  required>
+              <label class="form__label" for="phone">Teléfono</label>
+            </div>
+            <span class="form__alert">Este campo es obligatorio</span>
           </div>
-          <div class="form--container__input">
-            <input class="form__input" type="text" name="levelStudy" id="levelStudy" required>
-            <label class="form__label" for="levelStudy">Nivel de estudios</label>
+          <div class="form--container__input" id="group__levelStudy">
+            <div class="form__group">
+              <input class="form__input" type="text" name="levelStudy" id="levelStudy"  required>
+              <label class="form__label" for="levelStudy">Nivel de estudios</label>
+            </div>
+            <span class="form__alert">Este campo es obligatorio</span>
           </div>
           <input class="form__input" type="submit" value="Enviar">
+          <div class="form__success">
+            <h2 class="form__success__title">Registro completado</h2>
+            <span class="form__icon"></span>
+          </div>
         </fieldset>
       </form>
       <span class="strat__icon--left-lower-corner"></span>
@@ -227,15 +258,5 @@
     </section>
     <section class="container__speakers"></section>
     <section class="container__agenda"></section>
-    <script src="js/simplyCountdown.min.js"></script>
-    <script src="js/countdown.js"></script>
-    <script>
-      const acordeon = document.getElementsByClassName('topic');
-      for (i=0; i<acordeon.length; i++ ){
-        acordeon[i].addEventListener('click',function(){
-          this.classList.toggle('active')
-        })
-      }
-    </script>    
   </body>
 </html>
