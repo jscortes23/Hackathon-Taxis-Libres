@@ -462,6 +462,7 @@ picture, img {
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-margin-left: 8px;
+    place-content: center;
 }
 
 .modalities__card {
