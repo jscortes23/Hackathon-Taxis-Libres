@@ -8,6 +8,7 @@
     <link rel="preload" href="/css/font/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/css/font/Oxanium-VariableFont_wght.ttf" as="font" type="font/tff" crossorigin>
     <link rel="stylesheet" href="/css/style/mobile.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script defer src="/js/form.js"></script>
     <script defer src="js/simplyCountdown.min.js"></script>
     <script defer src="js/countdown.js"></script>
@@ -254,11 +255,70 @@
         </div>      
       </div>
     </section>
-    <section class="container__speakers"></section>
+    <section class="container__speakers">
+      <h2 class="speakers__title">Speakers</h2>
+      <style>
+        .swiper-3d .swiper-slide-shadow-right,
+        .swiper-3d .swiper-slide-shadow-left {
+            background-image: none;
+        }
+      </style>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="speakers__slider__img" src="/assets/speakers/pexels-andrea-piacquadio-762020 1.png" alt="falta">
+          </div>
+          <div class="swiper-slide">
+            <img class="speakers__slider__img" src="/assets/speakers/pexels-chloe-1043471 1.png" alt="falta">
+          </div>
+          <div class="swiper-slide">
+            <img class="speakers__slider__img" src="/assets/speakers/pexels-mentatdgt-1024311 1.png" alt="falta">
+          </div>
+          <div class="swiper-slide">
+            <img class="speakers__slider__img" src="/assets/speakers/pexels-pixabay-220453 1.png" alt="falta">
+          </div>
+          <div class="swiper-slide">
+            <img class="speakers__slider__img" src="/assets/speakers/pexels-veerasak-piyawatanakul-2415938 1.png" alt="falta">
+          </div>
+        </div>
+      </div>
+      <h3 class="speakers__name">Luis</h3>
+      <p class="speakers__text">Taxis Libres</p>
+    </section>
     <section class="container__agenda">
       <h2 class="body__title">Agenda</h2>      
       <p class="text__agenda">Conoce todo el cronograma planteado para el evento</p>
       <a href="https://example.com" target="_blank">Descargar agenda</a>
-    </section>    
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 5,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true
+      });
+      var classSwiper = document.querySelector('.swiper');
+      var shadowLeft = document.querySelector('.swiper-3d .swiper-slide-shadow-left');
+      var shadowRight = document.querySelector('.swiper-3d .swiper-slide-shadow-right');
+      shadowLeft.style.backgroundImage = "none";
+      shadowLeft.setAttribute('style', 'background-image: none');
+      shadowRight.style.backgroundImage = "url(noone)";
+      classSwiper.style.overflow = 'visible';
+    </script>    
   </body>
 </html>

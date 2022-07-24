@@ -260,7 +260,7 @@ picture, img {
 
 
 .form__success {
-    display: block;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -745,6 +745,63 @@ picture, img {
         -webkit-transform: translateX(calc(-200px * 6));
         transform: translateX(calc(-200px * 6));
     }
+}
+
+/* Section speakers */
+
+.container__speakers {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.speakers__title {
+    font-weight: 800;
+    font-size: var(--lg-xxx);
+    color: var(--text-color);
+    margin-bottom: 80px;
+}
+
+.swiper {
+    width: 48%;
+    max-width: 437px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-left {
+    background-image: none;
+}
+
+.speakers__slider__img {
+    width: 100%;
+    clip-path: circle(50%);
+    border-radius: 50%;
+    border: 8px solid #F2F2F2;
+} 
+
+.speakers__name {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-size: var(--lg-x);
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.speakers__text {
+    margin-bottom: 150px;
+    font-size: var(--md);
+    font-weight: 400;
+    color: var(--text-color);
 }
 
 /* Section agenda */
