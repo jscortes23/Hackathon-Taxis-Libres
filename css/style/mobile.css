@@ -411,6 +411,7 @@ picture, img {
     border: none;
     color: #002765;
     background-color: var(--primary-color);
+    cursor: pointer;
 }
 
 .strat__icon--left-lower-corner {
@@ -600,11 +601,7 @@ picture, img {
     width: 100%;
     display: flex;
     margin-bottom: 24px;
-    /* justify-content: space-between; */
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    scroll-margin-left: 8px;
+    overflow-x: hidden;
     place-content: center;
 }
 
@@ -616,7 +613,6 @@ picture, img {
     height: auto;
     border-radius: 8px;
     background: linear-gradient(91.01deg, #D5E1F3 -31.21%, #EEF2F8 133.19%);
-    scroll-snap-align: center;
 }
 
 .modalities__card__title {
@@ -634,28 +630,52 @@ picture, img {
     padding-bottom: 12px;
 }
 
-[class="modalities__radio"] {
+input[name="card"] {
+    display: none;
+}
+
+input[id="1"]:checked ~ .modalities--container__card .modalities__card[data-card="card1"]{
+    transform: translateX(109%);
+}
+
+input[id="3"]:checked ~ .modalities--container__card .modalities__card[data-card="card3"]{
+    transform: translateX(-110%);
+}
+
+.modalities__radio {
     box-sizing: content-box;
     display: inline-block;
+    position: absolute;
+    bottom: -28%;
     width: 13px;
     height: 13px;
     border-radius: 50%;
     background-color: #D9D9D9;
     border: 4px solid #D9D9D9;
-    margin-bottom: 80px;
 }
 
-[class="modalities__radio"]:focus {
+.modalities__radio:nth-last-child(2) {
+    left: 78%;
+    right: 0;
+}
+
+.modalities__radio:nth-last-child(3) {
+    right: 0;
+    left: 22%;
+}
+
+input[id="1"]:checked ~ .modalities__radio[for="1"],
+input[id="2"]:checked ~ .modalities__radio[for="2"],
+input[id="3"]:checked ~ .modalities__radio[for="3"] {
     width: 13px;
     height: 13px;
     border-radius: 50%;
     background-color: #002765;
 }
 
-.modalities--contianer__points {
-    display: flex;
-    place-content: center;
-    column-gap: 44px;
+.modalities--container__content {
+    position: relative;
+    margin-bottom: 80px;
 }
 
 /* Section participe */
@@ -932,4 +952,10 @@ picture, img {
     align-items: center;    
     border-radius: 10px;
     margin: auto;
+}
+
+@media (min-width: 950px) {
+    .modalities__radio {
+        display: none;
+    }
 }
