@@ -52,7 +52,6 @@ inputs.forEach((input) => {
 });
 
 form.addEventListener('submit', (e)=> {
-  e.preventDefault();
   if (statesField.birthDate && statesField.city && statesField.country && statesField.email && statesField.firstName && statesField.lastName && statesField.levelStudy && statesField.phone) {
     form.reset();
     
@@ -63,3 +62,22 @@ form.addEventListener('submit', (e)=> {
   }
 });
 
+/* Menu */
+const btnMenuOpen = document.querySelector('.start__btn--nav');
+const btnMenuClose = document.querySelector('.menu__close');
+const menu = document.querySelector('.start--container__menu');
+const allBtnMenu = document.querySelectorAll('.item__link');
+
+btnMenuOpen.addEventListener('click', ()=>{
+  menu.style.display="initial"
+});
+
+btnMenuClose.addEventListener('click', ()=>{
+  menu.style.display="none"
+});
+
+allBtnMenu.forEach((btn)=>{
+  btn.addEventListener('click', ()=>{
+    menu.style.display="none"
+  })
+});

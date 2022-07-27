@@ -17,6 +17,29 @@
     <section class="container__start">
       <span class="strat__icon--right-upper-corner"></span>
       <button class="start__btn--nav"></button>
+      <nav class="start--container__menu">
+        <button class="menu__close"></button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="item__link" href="#modalities">Modalidades</a>
+          </li>
+          <li class="menu__item">
+            <a class="item__link" href="#awards">Premios</a>
+          </li>
+          <li class="menu__item">
+            <a class="item__link" href="#participe">¿cómo participar?</a>
+          </li>
+          <li class="menu__item">
+            <a class="item__link" href="#sponsor">Patrocinadores</a>
+          </li>
+          <li class="menu__item">
+            <a class="item__link" href="#speakers">Speakers</a>
+          </li>
+          <li class="menu__item">
+            <a class="item__link" href="#agenda">Agenda virtual</a>
+          </li>
+        </ul>
+      </nav>
       <div class="start--container__image">
         <img class="start__logo" src="/assets/icons/logo-taxis-libre.png" alt="Logo Taxis Libre">
         <h1 class="start__title">Hackathon 2022</h1>
@@ -137,7 +160,7 @@
         <iframe class="youtube" src="https://www.youtube.com/embed/uymNo5govDI" title="Taxis Libres | Así se vivió la Hackathon Taxis Libres 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
     </section>
-    <section class="container__modalities">
+    <section class="container__modalities" id="modalities">
       <h2 class="modalities__title">Modalidades</h2>
       <div class="modalities--container__card">
         <article class="modalities__card" id="card1">
@@ -162,7 +185,7 @@
         </a>
       </div>
     </section>
-    <section class="awards">
+    <section class="awards" id="awards">
     <h2 class="body__title">Premios</h2> 
       <div class="container__awards">    
         <div class="awards__card">            
@@ -197,7 +220,7 @@
         </div>
       </div>    
     </section>    
-    <section class="container__participe">
+    <section class="container__participe" id="participe">
       <h2 class="participe__title">¿Cómo participar?</h2>
       <input class="participe__input--radio" type="radio" name="participe" id="p1" value="p1" checked>
       <label class="participe__label" for="p1">1</label>
@@ -212,7 +235,7 @@
       <p class="participe__text" data-text="p3">Registrate en shikuani</p>
       <p class="participe__text" data-text="p4">Ingresa los datos de tus compañeros</p>
     </section>
-    <section class="container__sponsor">
+    <section class="container__sponsor" id="sponsor">
       <h2 class="body__title">Patrocinadores</h2> 
       <div class="slider">
         <div class="slider-track">
@@ -257,7 +280,7 @@
         </div>      
       </div>
     </section>
-    <section class="container__speakers">
+    <section class="container__speakers" id="speakers">
       <h2 class="speakers__title">Speakers</h2>
       <style>
         .swiper-3d .swiper-slide-shadow-right,
@@ -287,7 +310,7 @@
       <h3 class="speakers__name">Luis</h3>
       <p class="speakers__text">Taxis Libres</p>
     </section>
-    <section class="container__agenda">
+    <section class="container__agenda" id="agenda">
       <h2 class="body__title">Agenda</h2>      
       <p class="text__agenda">Conoce todo el cronograma planteado para el evento</p>
       <a href="https://example.com" target="_blank">Descargar agenda</a>

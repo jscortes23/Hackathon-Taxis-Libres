@@ -26,6 +26,7 @@ html {
     font-size: 62.5%;
     letter-spacing: 0.07rem;
     background-color: var(--font-color);
+    scroll-behavior: smooth;
 }
 
 /* Global variables */
@@ -69,11 +70,12 @@ picture, img {
 }
 
 .start__btn--nav {
-    position: absolute;
+    position: fixed;
     top: 13px;
     left: 13px;
     width: 34px;
     height: 34px;
+    z-index: 2;
     border: none;
     border-radius: 50%;
     background-color: var(--primary-color);
@@ -185,6 +187,84 @@ picture, img {
     font-size: var(--lg);
     font-weight: 500;
     margin-bottom: 12px;
+}
+
+/* Section menu */
+
+.start--container__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    max-width: 287px;
+    height: 90vh;
+    display: none;
+    padding: 57px 35px 55px 53px;
+    font-family: 'Oxanium', sans-serif;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 13px;
+    transition: width 1s ease-out;
+}
+
+.menu__close::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.menu__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu__item {
+    position: relative;
+    padding: 22px 0;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #CECECE;
+}
+
+.menu__close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 22px;
+    height: 22px;
+    background-image: url('/assets/icons/icon-close.svg');
+    background-position: center;
+    background-size: contain;
+    background-color: inherit;
+    border: none;
+}
+
+.item__link {
+    padding: 22px 0;
+    padding-right: 46%;
+    white-space: nowrap;
+    font-size: var(--md);
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.item__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 17px;
+    height: 100%;
+    background-image: url('/assets/icons/flecha-derecha.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .start--container__form {
